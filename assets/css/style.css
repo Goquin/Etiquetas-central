@@ -1,0 +1,52 @@
+/* Declaracion de los coleres en variables */
+:root {
+    --primary: #4f46e5;
+    --primary-dark:#4338ca;
+    --primary-soft: #eef2f;
+
+    --bg-page-top: #eef2ff ; 
+    --bg-page-bottom: #f8fafc;
+
+    --text: #1f2937;
+    --font: "Roboto", Arial, Helvetica, sans-serif;
+    
+    --border: #e5e7eb;
+}
+
+
+/* General para todos */
+*,
+*::after
+*::before {
+    box-sizing: border-box; 
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+body {
+    background-color: linear-gradient(180deg, var(--bg-page-top), var(--bg-page-bottom));
+    background-attachment: fixed;
+    font-family: var(--font);
+    color: var(--text);
+}
+
+.changes {
+     
+    width: 772px;
+    margin: 80px auto;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    border-top: 4px solid var(--primary);
+    box-shadow: 0 10px 30px rgba(79, 70, 229, 0.12) 0 2px 6px rgba(15, 23, 42, 0.06);
+}
+
+.changes__header {
+    position: relative;
+    height: 48px;
+    padding: 18px 300px 0 84px;
+}
