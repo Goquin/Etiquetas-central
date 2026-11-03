@@ -2,7 +2,12 @@
 :root {
     --primary: #4f46e5;
     --primary-dark:#4338ca;
-    --primary-soft: #eef2f;
+    --primary-soft: #eef2ff;
+
+    --add-text: #15803d;
+    --add-bg: #dcfce7;
+    --del-text: #b91c1c;
+    --del-bg: #fee2e2;
 
     --bg-page-top: #eef2ff ; 
     --bg-page-bottom: #f8fafc;
@@ -43,10 +48,107 @@ body {
     border-radius: 16px;
     border-top: 4px solid var(--primary);
     box-shadow: 0 10px 30px rgba(79, 70, 229, 0.12) 0 2px 6px rgba(15, 23, 42, 0.06);
+
+    .changes__header {
+    position: relative;
+    height: 84px;
+    padding: 18px 300px 0 84px;
+    }
+
+    .changes__icon {
+        width: 48px;
+        height: 48px;
+        position: absolute;
+        top: 18px; left: 20px;
+        background-color: var(--primary-soft);
+        border-radius: 10px;
+        color: var(--primary);
+
+        svg {
+            position: absolute;
+            top: 50%; 
+            left: 50%; 
+            margin: -11px 0px 0px -11px;
+        }
+
+    }
+
+    
+        
+    .changes__title {
+           
+            margin: 0 0 4px;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 20px;
+    }
+
+     .diff {
+            
+        margin: 0;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 24px;
+        white-space: nowrap;
+
+
+        .diff__add,
+        .diff__del {
+            display: inline-block;
+            padding: 0 8px;
+            border-radius: 999px;
+        }
+
+
+        .diff__add {
+            background-color: var(--add-bg);
+            color: var(--add-text);
+        }
+            
+        .diff__del {
+            background-color: var(--del-bg);
+            color: var(--del-text);
+        }
+    }
+    
+    .changes__actions {
+
+        position: absolute;
+        top: 24px;
+        right: 20px;
+        white-space: nowrap;
+
+
+        .btn {
+
+            display: inline-block;
+            height: 36px;
+            padding: 0 16px;
+            margin-left: 8px;
+            font: inherit;
+            font-size: 14px;
+            font-weight: 500;
+            border: 1px solid transparent;
+            border-radius: 10px;
+            vertical-align: middle;
+            cursor: pointer;
+            
+            .btn:hover {
+                transition: background-color 0.15s ease;
+
+            }
+
+            .btn--ghost {
+
+            }
+
+            .btn--outline {
+
+            }
+        }
+
+    }
 }
 
-.changes__header {
-    position: relative;
-    height: 48px;
-    padding: 18px 300px 0 84px;
-}
+
+
