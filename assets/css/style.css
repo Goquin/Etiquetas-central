@@ -14,8 +14,9 @@
 
     --text: #1f2937;
     --font: "Roboto", Arial, Helvetica, sans-serif;
-    
+    --text-grey : #6b7280;
     --border: #e5e7eb;
+    --file-bg: #f5f7ff;
 }
 
 
@@ -132,22 +133,110 @@ body {
             border-radius: 10px;
             vertical-align: middle;
             cursor: pointer;
+            transition: background-color 0.15s ease;
             
-            .btn:hover {
-                transition: background-color 0.15s ease;
+        }    
+        
+        .btn:focus-visible {
 
-            }
+            outline: 3px solid rgba(79, 70, 229, 0.4);
+            outline-offset: 2ps;
 
-            .btn--ghost {
-
-            }
-
-            .btn--outline {
-
-            }
         }
 
+
+        .btn--ghost {
+            
+            padding: 0 10px;
+            background: transparent;
+            color: var(--primary);
+
+
+            svg {
+
+                display: inline-block;
+                margin-left: 8px;
+                vertical-align: middle;
+            }
+
+        }
+
+        .btn--ghost:hover {
+            background: var(--primary-soft);
+        }
+
+        .btn--outline {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn--outline:hover {
+            background: var(--primary-dark);
+        }
+   
     }
+
+    .changes__files {
+
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        border-top: 1px solid var(--border);
+        
+
+        li:last-child {
+            border:transparent;
+        }
+
+        .changes__file {
+
+            position: relative;
+            padding: 12px 130px 12px 20px;
+            border-bottom: 1px solid var(--border);
+            transition: background-color 0.15s ease;
+
+            .file__path {
+                
+                display: block;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 24px;
+                color: var(--text);
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+
+                .file__dir {
+                    
+                    font-weight: 300;
+                    color: var(--text-grey);
+
+                }
+            
+            }
+
+
+            .file__diff {
+
+                position: absolute;
+                top: 12px;
+                right: 20px;
+
+            }
+            
+
+            
+
+        }
+
+        .changes__file:hover {
+
+         background: var(--file-bg);
+
+         }
+
+    }
+
 }
 
 
